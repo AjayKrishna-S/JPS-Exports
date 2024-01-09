@@ -215,39 +215,29 @@ hr {
   border-top-right-radius: 50%;
   box-shadow: 0px 10px 15px rgba(15, 56, 122, 0.6);
 }
+
 /*product Slid Section*/
+
 .home-section{
   position: relative;
 }
-
 .product-slid-sec {
   position:absolute;
   top:0px;
   right:100px;
   bottom:0px;
   left:100px;
+
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-
-  /*
-  justify-content:space-evenly;
-  justify-content: center;
-  */
 }
-
-/*div container*/
 .products-flex{   
   position: relative;
   max-width: 1500px;
   width:100%;
   display: flex;
-
-  /*
-    height:480px;
-      padding-left:50px;
-  */
 }
 /*Slid Arrow button*/
 .products-flex i {
@@ -266,23 +256,16 @@ hr {
   box-shadow: 0 3px 6px rgba(0,0,0,0.23);
   transform: translateY(-50%);
   transition: transform 0.1s linear;
-  /*
-  
-  */
 }
-
 .products-flex i:active{
   transform: translateY(-50%) scale(0.85);
 }
-
-
 .products-flex i:first-child{
   left: -90px;
 }
 .products-flex i:last-child{
   right: -90px;
 }
-
 .products-flex .carousel{
   display: grid;
   grid-auto-flow: column;
@@ -296,9 +279,7 @@ hr {
   height:350px;
   align-items: center;
   justify-content:space-around;
-
 }
-
 .carousel::-webkit-scrollbar {
   display: none;
 }
@@ -307,13 +288,12 @@ hr {
 }
 .carousel.dragging {
   scroll-snap-type: none;
-  scroll-behavior:smooth;
+  scroll-behavior:auto;
 }
 .carousel.dragging .product-card {
   cursor: grab;
   user-select: none;
 }
-
 .carousel .product-card{
   scroll-snap-align: start;
   height:270px;
@@ -327,14 +307,7 @@ hr {
   opacity:0.92;
   transition: 0.15s;
   cursor:pointer;
-
-  /*
-     scroll-snap-align: start;
-    display:flex;
-  */
-
 }
-
 .product-card:hover{
   position:relative;
   height:300px;
@@ -420,21 +393,28 @@ hr {
   margin:0px;
 }
 
-/*
-End of Product Slid Section
-*/
+@media screen and (max-width: 900px) {
+  .products-flex .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+@media screen and (max-width: 700px) {
+  .products-flex .carousel {
+    grid-auto-columns: calc((100% / 3) - 9px);
+  }
+}
 
+@media screen and (max-width: 600px) {
+  .products-flex .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+
+
+/* End of Product Slid Section */
 #middle-section-grid{
 
   display:grid;
-}
-
-.grid-box{
-
-}
-
-.grid-box-right{
-
 }
 
 .map-section{
